@@ -7,7 +7,6 @@ public class MirrorPosition1 : MonoBehaviour
 {
     public GameObject mirrorParent;
 
-    //game ball's transform
     public GameObject mirrorChild;
 
     // Start is called before the first frame update
