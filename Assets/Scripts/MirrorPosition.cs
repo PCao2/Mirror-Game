@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MirrorPosition1 : MonoBehaviour
+public class MirrorPosition : MonoBehaviour
 {
     public GameObject mirrorParent;
 
@@ -21,6 +21,15 @@ public class MirrorPosition1 : MonoBehaviour
         Vector3 parentPosition = mirrorParent.transform.position;
         Quaternion parentRotation = mirrorParent.transform.rotation;
 
-        mirrorChild.transform.SetPositionAndRotation(parentPosition, parentRotation);
+        // Reverse rotation around x- and y-axis
+        float parentAngle = 0.0f;
+        Vector3 parentAxis = Vector3.zero;
+        parentRotation.ToAngleAxis(out parentAngle, out parentAxis);
+        Vector3 mirrorAxis = new Vector3(-parentAxis.x, -parentAxis.y, parentAxis.z);
+
+        Vector3 mirrorPosition = new Vector3(parentPosition.x, parentPosition.y, -parentPosition.z);
+        Quaternion mirrorRotation = Quaternion.AngleAxis(parentAngle, mirrorAxis);
+
+        mirrorChild.transform.SetPositionAndRotation(mirrorPosition, mirrorRotation);
     }
 }
