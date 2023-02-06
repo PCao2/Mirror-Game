@@ -422,6 +422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnvilTest
       objectReference: {fileID: 0}
+    - target: {fileID: 7242944475213164239, guid: ac28d04fd962b0b4a8a782218e34dd27,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac28d04fd962b0b4a8a782218e34dd27, type: 3}
 --- !u!1 &331767254 stripped
@@ -1872,6 +1877,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowlingBallTest_Mirror
       objectReference: {fileID: 0}
+    - target: {fileID: 5360621111203802307, guid: 731ec584a1093b5489999863e77c608c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731ec584a1093b5489999863e77c608c, type: 3}
 --- !u!1 &919248135
@@ -3158,10 +3168,38 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392037947}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5824432, y: 0.20176347, z: 0.5824432}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1392037957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392037947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b253e8dbbdc2a49a8fcb933b4edb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectGoal: 5
+  door: {fileID: 0}
+  objectsCollected: 0
+--- !u!65 &1392037958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392037947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5824432, y: 0.4017635, z: 0.5824432}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1470397059
 GameObject:
@@ -3910,6 +3948,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowlingBallTest
       objectReference: {fileID: 0}
+    - target: {fileID: 5360621111203802307, guid: 731ec584a1093b5489999863e77c608c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
+      objectReference: {fileID: 0}
     - target: {fileID: 7529406630420083263, guid: 731ec584a1093b5489999863e77c608c,
         type: 3}
       propertyPath: m_Enabled
@@ -4007,6 +4050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AnvilTest_Mirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242944475213164239, guid: ac28d04fd962b0b4a8a782218e34dd27,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac28d04fd962b0b4a8a782218e34dd27, type: 3}
@@ -4107,27 +4155,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1870449221 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 306f0da071dfc2b4794457c0f773e754,
-    type: 3}
-  m_PrefabInstance: {fileID: 1282468747}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1870449222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870449221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b253e8dbbdc2a49a8fcb933b4edb58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectGoal: 5
-  door: {fileID: 0}
-  scaleTop: {fileID: 1392037947}
 --- !u!1 &1886378635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7242944475213164239, guid: ac28d04fd962b0b4a8a782218e34dd27,
