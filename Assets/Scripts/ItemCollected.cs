@@ -8,9 +8,9 @@ public class ItemCollected : MonoBehaviour
     // Number of collectibles needed to unlock door
     public int collectGoal = 5;
 
-    public GameObject door;
+    public SlideDoor door;
 
-    public int objectsCollected = 0;
+    private int objectsCollected = 0;
     private float scaleMaxHeight;
 
     // Start is called before the first frame update
@@ -19,27 +19,16 @@ public class ItemCollected : MonoBehaviour
         scaleMaxHeight = transform.position.y;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     // Update the scale's position and text based on proportion of collectibles collected
     void AdjustScale()
     {
         float totalMovement = 0.05f;
         float adjustment = (objectsCollected / (float) collectGoal) * totalMovement;
-        float scaleCurrentHeight = scaleMaxHeight - adjustment;
+        float scaleNewHeight = scaleMaxHeight - adjustment;
 
-        Vector3 scaleTopPosition = transform.position;
-        Vector3 scaleTopNewPosition = new Vector3(scaleTopPosition.x, scaleCurrentHeight, scaleTopPosition.z);
+        Vector3 scaleTopNewPosition = new Vector3(transform.position.x, scaleNewHeight, transform.position.z);
 
         transform.position = scaleTopNewPosition;
-    }
-
-    void UnlockDoor()
-    {
-        return;
     }
 
     void OnTriggerEnter(Collider other)
@@ -48,11 +37,11 @@ public class ItemCollected : MonoBehaviour
         {
             objectsCollected = objectsCollected + 1;
             AdjustScale();
+        }
 
-            if (objectsCollected == collectGoal)
-            {
-                UnlockDoor();
-            }
+        if (objectsCollected == collectGoal)
+        {
+            door.open = true;
         }
     }
 
@@ -63,5 +52,11 @@ public class ItemCollected : MonoBehaviour
             objectsCollected = objectsCollected - 1;
             AdjustScale();
         }
+        if (objectsCollected <= collectGoal)
+        {
+            door.open = false;
+        }
+
+
     }
 }
