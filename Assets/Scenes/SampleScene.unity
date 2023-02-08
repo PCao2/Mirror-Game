@@ -742,8 +742,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478495144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6970001, y: 0.72, z: 1.0893}
-  m_LocalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
+  m_LocalPosition: {x: -1.6970001, y: 0.72, z: 0.86785}
+  m_LocalScale: {x: 0.36010498, y: 0.36010498, z: 0.36010498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1572,6 +1572,12 @@ Transform:
   m_Father: {fileID: 501472329}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &789049382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5027247230396663634, guid: 306f0da071dfc2b4794457c0f773e754,
+    type: 3}
+  m_PrefabInstance: {fileID: 610930643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &817301256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,7 +3292,7 @@ BoxCollider:
   m_GameObject: {fileID: 1392037947}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5824432, y: 0.20176347, z: 0.5824432}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3317,6 +3323,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5824432, y: 0.2517635, z: 0.5824432}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!64 &1392037962
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392037947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2384240765946009015, guid: 306f0da071dfc2b4794457c0f773e754, type: 3}
+--- !u!114 &1392037963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392037947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9129f658aea0e5a4682bbc2a3cbe7f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mirrorParent: {fileID: 1392037947}
+  mirrorChild: {fileID: 789049382}
 --- !u!1 &1470397059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,8 +4517,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858869998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6970001, y: 0.72, z: -1.0893002}
-  m_LocalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
+  m_LocalPosition: {x: -1.6970001, y: 0.72, z: -0.86785}
+  m_LocalScale: {x: 0.36010498, y: 0.36010498, z: 0.36010498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
